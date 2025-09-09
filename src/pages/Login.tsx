@@ -16,6 +16,8 @@ export default function LoginPage() {
         try {
             const { token } = await login(username, password);
             localStorage.setItem('token', token);
+            // Dispatch a custom event to notify App.tsx
+            window.dispatchEvent(new Event('loginEvent'));
             navigate('/');
         } catch (err) {
             setError('Invalid username or password');

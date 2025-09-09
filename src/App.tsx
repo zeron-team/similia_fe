@@ -104,8 +104,13 @@ function App() {
       setIsAuthenticated(!!localStorage.getItem('token'));
     };
     window.addEventListener('storage', handleStorageChange);
+
+    // Listen for custom login event
+    window.addEventListener('loginEvent', handleStorageChange); // Reuse handleStorageChange
+
     return () => {
       window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('loginEvent', handleStorageChange); // Clean up custom event listener
     };
   }, []);
 
