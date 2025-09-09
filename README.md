@@ -1,12 +1,33 @@
+## DEPLOY
+
+* Limpiar todo el caché local
+```bash
+npm cache clean --force
+```
+* Borrar node_modules y package-lock.json
+```bash
+rm -rf node_modules package-lock.json
+```
+* Reinstalar todo
+```bash
+npm install
+npm install -D vite @vitejs/plugin-react
+npm install uuid
+```
 ## RUN
-```text
+* local
+```bash
 npm run dev
+```
+* servidor
+```bash
+npm run dev -- --host
 ```
 
 ## GIT
 
 * …or create a new repository on the command line
-```text 
+```bash 
 echo "# similia_fe" >> README.md
 git init
 git add README.md
@@ -16,7 +37,7 @@ git remote add origin https://github.com/zeron-team/similia_fe.git
 git push -u origin main
 ```
 * …or push an existing repository from the command line
-```text
+```bash
 git remote add origin https://github.com/zeron-team/similia_fe.git
 git branch -M main
 git push -u origin main
