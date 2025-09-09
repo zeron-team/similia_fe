@@ -23,6 +23,16 @@ npm run dev
 ```bash
 npm run dev -- --host
 ```
+* servidor siempre activo
+* primer paso: instalar pm2
+```bash
+npm install -g pm2
+```
+* segundo paso:
+```bash
+pm2 start npm --name similia-frontend -- run dev -- --host
+```
+
 
 ## GIT
 
