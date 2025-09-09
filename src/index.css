@@ -1,0 +1,8 @@
+/* frontend/src/index.css */
+
+/* Import Montserrat font from Google Fonts if not already imported in index.html */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); */
+
+html, body, #root {
+  height: 100%;
+}
